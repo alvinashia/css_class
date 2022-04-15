@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <style>
+        .background {
+            height: 500px;
+            background: url('./images/Musee\ du\ Louvre.jpg') center center / cover no-repeat;
+            position: relative;
+        }
+        /* 在最外層去設定relative */
+
+        .cover {
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0);
+            transition: .5s;
+        }
+        /* 設定一層 黑布且透明度調最低*/
+        h1 {
+            color: aliceblue;
+            text-align: center;
+            margin: 0px;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background-color: black;
+            opacity: 0.3;
+            position: absolute;
+            bottom: 0px;
+            transition: .5s;
+        }
+         /* h1設定重點透明度調低，位置設在buttom,且寬度設10%才能跟他跟外框一樣 位置因為有設定外層relative所以直接用abosulute去設置位置*/
+        .cover:hover {
+          background-color: rgba(0, 0, 0, 0.404);
+        }
+        /* 設定滑鼠移動過去時黑布會變暗的效果 */
+
+        .background:hover h1 {
+         color: aliceblue;
+         background-color: rgba(0, 0, 0, 0.199);
+         opacity: 1;
+        }
+        /* 指定當滑鼠移過去的時候透明度變最高就能顯示字，然後背景的透明度調低就能讓背景的黑色不要那麼明顯 */
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="cover"></div>
+            <h1>Paris</h1>
+    </div>
+</body>
+
+</html>

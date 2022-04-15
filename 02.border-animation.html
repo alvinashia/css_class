@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border animation</title>
+    <style>
+        .wrap {
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .border-radius-1 {
+            border-radius: 45% / 45%;
+            animation: circle-loop 1s linear infinite;
+        }
+
+        .border-radius-2 {
+            border-radius: 100px 100px / 90px 100px;
+            animation: circle-loop 2s linear infinite;
+        }
+
+        .border-radius-3 {
+            border-radius: 100px 140px 100px 140px / 100px 90px 150px 140px;
+            animation: circle-loop 3s linear infinite;
+        }
+
+        @keyframes circle-loop {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box border-radius-1"></div>
+        <div class="box border-radius-2"></div>
+        <div class="box border-radius-3"></div>
+    </div>
+</body>
+
+</html>
