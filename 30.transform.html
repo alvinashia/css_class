@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #faf;
+            transition: .5s;
+            margin: 10px;
+        }
+
+        .translateX:hover {
+            transform: translateX(50px);
+        }
+
+        /* 往右移動50px */
+
+        .translateY:hover {
+            transform: translateY(50px);
+        }
+
+        .rotate:hover {
+            transform: rotate(360deg);
+        }
+
+        /*可以轉角，最多可以調到360度 */
+        .scaleX:hover {
+            transform: scaleX(2);
+        }
+
+        /* 往兩邊衍生,xy都可以用 */
+
+        .skewX {
+            /* transform: skewX(60deg) rotate(360deg); */
+            margin: 0;
+
+        }
+        .wrap{
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+        }
+
+        .wrap:hover .skewX {
+            transform: translateX(500px) skewX(60deg) rotate(180deg) ;
+
+        }
+        /* hover要放在父層上，也就是感應區域在父層（紅色框框）這樣感應區域才不會隨著粉色框框一起跑 ，當初設定的時候要記得在粉色框框那邊設置margin:0 才不會有位移的效果*/
+        /* 可以轉不同的角度設定,可以一樣去調整XY去做位置的變化 */
+    </style>
+</head>
+
+<body>
+    <div class="box translateX"></div>
+    <div class="box translateY"></div>
+    <div class="box rotate"></div>
+    <div class="box scaleX"></div>
+    <div class="wrap">
+        <div class="box skewX"></div>
+    </div>
+</body>
+
+</html>
