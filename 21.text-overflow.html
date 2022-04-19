@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text overflow</title>
+    <style>
+        .container {
+            width: 180px;
+            /* height: 100px; */
+            background-color: #ccc;
+        }
+
+        .single {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .container2{
+            width: 180px;
+            background-color: #ccc;
+        }
+    
+        .single2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .single3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .container3{
+            margin: 0 auto;
+            max-width: 70%;
+            border: 1px solid red;
+        }
+
+        .single4 {
+           word-break: keep-all;
+           word-wrap: break-word;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="single">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque numquam, mollitia
+            blanditiis fugit alias
+            ullam quidem soluta delectus repudiandae earum quod maiores praesentium eum autem nobis nostrum accusamus
+            consectetur dicta!</p>
+    </div>
+
+    <div class="container2">
+        <p class="single2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis, quod itaque alias nesciunt eligendi vitae libero assumenda sed magni! Sint alias expedita nobis temporibus eum quibusdam eius repellendus ab.
+        Natus sapiente animi dolorum deleniti itaque enim quaerat praesentium dignissimos. Distinctio sunt numquam aspernatur! Rem quisquam enim repellat itaque voluptatum esse sit tenetur quis quidem, saepe, omnis a laborum quibusdam.enda sed magni! Sint alias expedita nobis temporibus eum quibusdam eius repellendus ab.atus sapiente animi dolorum deleniti itaque enim quaerat praesentium dignissimos. Distinctio sunt numquam aspernatur! Rem quisquam enim repellat itaque volupt</p>
+    </div>
+
+    <div class="container3">
+<p class="single4">
+    ugit alias
+    ullam quidem soluta delectus repudiandae earum quod maiores praesentium eum au引擎熱門特殊現實想起運行因此，好了行業製作烏日具體，難道下降工廠路線多個一名東方領域採訪出發眼光給他，面向廣場，下列印象女朋友以便空間地位目錄昨日版面不起接近崗位實際上，新鮮新浪寫出來用品推薦官方防治警告感興趣，並非和你就在公園才會不能下載，上下競爭力你。擎熱門特殊現實想起運行因此，好了行業製作烏日具體，難道下降工廠路線多個一名東方領域採訪出發眼光給他，面向廣場，下列印象女朋友以便空間地位目錄昨日版面不起接近崗位實際上，新鮮新浪寫出來用品推薦官方防治警告感興趣，並非和你就在公園才會不能下載，上下競爭力你。擎熱門特殊現實想起運行因此，好了行業製作烏日具體，難道下降工廠路線多個一名東方領域採訪出發眼光給他，面向廣場，下列印象女朋友以便空間地位目錄昨日版面不起接近崗位實際上，新鮮新浪寫出來用品推薦官方防治警告感興趣，並非和你就在公園才會不能下載，上下競爭力你。
+</p>
+    </div>
+</body>
+
+</html>
