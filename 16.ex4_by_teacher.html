@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+    <style>
+        body {
+            height: 100vh;
+            position: relative;
+        }
+
+        .wrap {
+            /* height: 80vh; */
+            position: relative;
+            background-color: #000;
+        }
+
+        .background {
+            /* width: 1000px; */
+            height: 500px;
+            background: url('./images/Musee\ du\ Louvre.jpg') center center / cover no-repeat;
+            opacity: 1;
+        }
+
+        .wrap:hover .background {
+            opacity: 0.3;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+            background-color: #faf;
+            width: 100%;
+            opacity: 0.3;
+        }
+
+        .wrap:hover h1 {
+            color: blue;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="background"></div>
+        <h1>Paris</h1>
+    </div>
+</body>
+
+</html>

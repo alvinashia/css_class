@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #faf;
+            transition: width 3s;
+            /* 漸變的秒數 */
+            transition-duration: 3s;
+            /* transition-property: color; */
+            /* transition-timing-function: linear; */
+            /* 漸變加速度的效果，有網站可以用自動幫忙計算貝茲曲線的數值 */
+            /* transition-delay: 2s; */
+            /* 晚兩秒之後才會有變化的效果 */
+            transition-property: all;
+            opacity: 1;
+        }
+
+        .box:hover {
+            width: 800px;
+            background-color: #faf;
+            /* transition: width 3s; */
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
