@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            Grid-template-rows: 50px 300px 50px;
+            Grid-template-areas:
+                "header header"
+                "content menu"
+                "footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #faf;
+            overflow: hidden;
+        }
+
+        .menu {
+            grid-area: menu;
+            background-color: #ffa;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #afa;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #aaf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="./images/background1.jpg" alt="">
+        </div>
+        <div class="menu">menu1232132131</div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

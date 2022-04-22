@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg animation</title>
+    <style>
+        svg {
+            width: 400px;
+            height: 400px;
+            /* animation: circle-loop 3s linear infinite; */
+        }
+
+        .circle {
+            stroke-dasharray: 1194;
+            stroke-dashoffset: 1100;
+            animation: circle-stroke-animation 3s linear forwards;
+        }
+
+        .tick {
+            stroke-dasharray: 350;
+            stroke-dashoffset: 350;
+            animation: tick-stroke-animation 2s linear forwards 2.8s;
+        }
+
+        @keyframes circle-stroke-animation {
+            0% {
+                stroke-dashoffset: 1194;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes tick-stroke-animation {
+            0% {
+                stroke-dashoffset: 350;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+
+        @keyframes circle-loop {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg viewbox="0 0 400 400" width="400" height="400">
+        <circle class="circle" cx="200" cy="200" r="190" fill="none" stroke="lightgreen" stroke-width="20"
+            stroke-linecap="round" />
+        <polyline class="tick" points="88,214 173,284 304,138" stroke="lightgreen" stroke-width="20" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+</body>
+
+</html>

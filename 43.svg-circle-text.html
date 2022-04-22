@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg circle text</title>
+    <style>
+        .svg-text {
+            font-size: 2rem;
+            fill: blue;
+        }
+
+        svg {
+            width: 400px;
+            height: 400px;
+            animation: circle-loop 50s linear infinite;
+        }
+
+        @keyframes circle-loop {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg viewbox="0 0 500 500" width="500" height="500">
+        <path d="M 50,250
+        a 200,200 0 1,0 400,0
+        a 200,200 0 1,0 -400,0
+        " fill="none" stroke="red" id="myPath" />
+
+        <text class="svg-text">
+            <textpath xlink:href="#myPath">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam cupiditate adipisci tempore accusantium
+                maxime, repudiandae, atque doloribus porro voluptatum ipsum beatae provident corrupti tenetur cumque
+                eius
+                nesciunt consectetur! Nostrum, id.
+            </textpath>
+        </text>
+    </svg>
+</body>
+
+</html>
