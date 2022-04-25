@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex layout</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: 40px auto;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .mb-100 {
+            margin-bottom: 100px;
+        }
+
+        .nav-left,
+        .nav-middle,
+        .nav-right {
+            border: 1px solid red;
+            width: 33.33%;
+            min-height: 50px;
+        }
+
+        .nav-left>ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-left>ul>li {
+            margin: 0 5px;
+        }
+
+        .nav-left>ul>li>a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .buy-link {
+            background-color: #777;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .col {
+            width: 33.33%;
+            padding: 0 15px;
+        }
+
+        .img-wrap img {
+            width: 100%;
+        }
+
+        .sub-title>span {
+            width: 50%;
+        }
+
+        .product-info {
+            width: 30%;
+        }
+
+        .product-model-demo {
+            width: 50%;
+        }
+
+        .product-model-demo img {
+            width: 100%;
+        }
+
+        .product-area:nth-child(2n-1)>.product-info {
+            order: 1;
+        }
+        /* order相關用法可查詢https://w3c.hexschool.com/flexbox/4007bc24 */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="nav-left">
+                    <ul>
+                        <li>
+                            <a href="#">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#">Lookbook</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-middle"></div>
+                <div class="nav-right"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row justify-content-between mb-100">
+                    <h2>New In</h2>
+                    <a class="buy-link" href="#">Shop Now</a>
+                </div>
+
+                <div class="row mb-100">
+                    <div class="col">
+                        <div class="myCard">
+                            <div class="img-wrap">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="myCard">
+                            <div class="img-wrap">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="myCard">
+                            <div class="img-wrap">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                    alt="">
+                            </div>
+
+                            <p>Linen Top / Blue</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sub-title row justify-content-center mb-100">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo minus ea neque voluptatum
+                        dolorem accusamus quod.</span>
+                </div>
+
+                <div class="row justify-content-between product-area">
+                    <div class="product-info">
+                        <div class="img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                alt="">
+                        </div>
+                        <p>Lisa Shirt</p>
+                        <p>$50.00</p>
+                    </div>
+                    <div class="product-model-demo">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1565886250361-SBCI1H88EEW7YCIP4GSR/lauren-winter-20150715-IMG_9299-v1-FINAL.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="row justify-content-between product-area">
+                    <div class="product-info">
+                        <div class="img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                alt="">
+                        </div>
+                        <p>Lisa Shirt</p>
+                        <p>$50.00</p>
+                    </div>
+                    <div class="product-model-demo">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1565886250361-SBCI1H88EEW7YCIP4GSR/lauren-winter-20150715-IMG_9299-v1-FINAL.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="row justify-content-between product-area">
+                    <div class="product-info">
+                        <div class="img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                alt="">
+                        </div>
+                        <p>Lisa Shirt</p>
+                        <p>$50.00</p>
+                    </div>
+                    <div class="product-model-demo">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1565886250361-SBCI1H88EEW7YCIP4GSR/lauren-winter-20150715-IMG_9299-v1-FINAL.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="row justify-content-between product-area">
+                    <div class="product-info">
+                        <div class="img-wrap">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1562770859141-0P92159IWN2ULCRMTOMN/ulihu-charcoal-silk-linen-tunic_0326-v1-FINAL-copy.jpg"
+                                alt="">
+                        </div>
+                        <p>Lisa Shirt</p>
+                        <p>$50.00</p>
+                    </div>
+                    <div class="product-model-demo">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5d02d798cc25920001b61816/1565886250361-SBCI1H88EEW7YCIP4GSR/lauren-winter-20150715-IMG_9299-v1-FINAL.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
